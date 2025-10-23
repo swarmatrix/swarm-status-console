@@ -32,37 +32,30 @@ const Index = () => {
 
   return (
     <div className="min-h-screen bg-background bg-grid">
+      {/* Network mesh overlay */}
+      <div className="fixed inset-0 bg-network-mesh opacity-30 pointer-events-none" />
+      
+      {/* Scanlines effect */}
+      <div className="fixed inset-0 bg-scanlines opacity-10 pointer-events-none" />
+      
       {/* Overlay gradient */}
       <div className="fixed inset-0 bg-gradient-to-b from-background via-background/95 to-background pointer-events-none" />
+      
+      {/* Corner brackets UI */}
+      <div className="fixed top-4 left-4 w-16 h-16 border-l-2 border-t-2 border-[hsl(var(--cyber))] opacity-50 pointer-events-none" />
+      <div className="fixed top-4 right-4 w-16 h-16 border-r-2 border-t-2 border-[hsl(var(--cyber))] opacity-50 pointer-events-none" />
+      <div className="fixed bottom-4 left-4 w-16 h-16 border-l-2 border-b-2 border-[hsl(var(--cyber))] opacity-50 pointer-events-none" />
+      <div className="fixed bottom-4 right-4 w-16 h-16 border-r-2 border-b-2 border-[hsl(var(--cyber))] opacity-50 pointer-events-none" />
 
       <main className="relative container mx-auto px-4 py-16 max-w-4xl">
         {/* Header */}
         <header className="mb-16 text-center space-y-6">
-          <div className="relative inline-block">
-            {/* ECG line animation behind title */}
-            <div className="absolute inset-0 -inset-x-20 flex items-center justify-center opacity-20">
-              <svg
-                className="w-full h-24 animate-heartbeat"
-                viewBox="0 0 1200 100"
-                preserveAspectRatio="none"
-              >
-                <path
-                  d="M0,50 L300,50 L320,20 L340,80 L360,30 L380,70 L400,50 L500,50 L520,20 L540,80 L560,30 L580,70 L600,50 L700,50 L720,20 L740,80 L760,30 L780,70 L800,50 L1200,50"
-                  stroke="hsl(var(--cyber))"
-                  strokeWidth="2"
-                  fill="none"
-                  vectorEffect="non-scaling-stroke"
-                />
-              </svg>
-            </div>
-            
-            <div className="relative inline-flex items-center justify-center gap-3 mb-4">
-              <Activity className="w-8 h-8 text-[hsl(var(--cyber))] animate-pulse-glow" />
-              <h1 className="text-6xl md:text-7xl font-bold tracking-wider glow-cyber text-[hsl(var(--cyber))]">
-                SWARM
-              </h1>
-              <Activity className="w-8 h-8 text-[hsl(var(--cyber))] animate-pulse-glow" />
-            </div>
+          <div className="inline-flex items-center justify-center gap-3 mb-4">
+            <Activity className="w-8 h-8 text-[hsl(var(--cyber))] animate-pulse-glow" />
+            <h1 className="text-6xl md:text-7xl font-bold tracking-wider glow-cyber text-[hsl(var(--cyber))]">
+              SWARM
+            </h1>
+            <Activity className="w-8 h-8 text-[hsl(var(--cyber))] animate-pulse-glow" />
           </div>
           
           <div className="flex items-center justify-center gap-2 text-muted-foreground">

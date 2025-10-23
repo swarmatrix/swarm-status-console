@@ -87,4 +87,32 @@ All colors MUST be HSL.
       radial-gradient(circle at 80% 70%, hsl(var(--cyber) / 0.05) 0%, transparent 50%);
     pointer-events: none;
   }
+  
+  .bg-network-mesh {
+    background-image: 
+      repeating-linear-gradient(
+        45deg,
+        transparent,
+        transparent 50px,
+        hsl(var(--cyber) / 0.03) 50px,
+        hsl(var(--cyber) / 0.03) 51px
+      ),
+      repeating-linear-gradient(
+        -45deg,
+        transparent,
+        transparent 50px,
+        hsl(var(--cyber) / 0.03) 50px,
+        hsl(var(--cyber) / 0.03) 51px
+      );
+  }
+  
+  .bg-scanlines {
+    background-image: repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent 2px,
+      hsl(var(--foreground) / 0.03) 2px,
+      hsl(var(--foreground) / 0.03) 4px
+    );
+  }
 }
