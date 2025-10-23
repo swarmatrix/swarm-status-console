@@ -63,6 +63,9 @@ export default {
         md: "calc(var(--radius) - 2px)",
         sm: "calc(var(--radius) - 4px)",
       },
+      fontFamily: {
+        mono: ['JetBrains Mono', 'monospace'],
+      },
       keyframes: {
         "accordion-down": {
           from: {
@@ -80,10 +83,39 @@ export default {
             height: "0",
           },
         },
+        "heartbeat": {
+          "0%, 100%": { 
+            transform: "translateX(-100%)" 
+          },
+          "50%": { 
+            transform: "translateX(100%)" 
+          },
+        },
+        "pulse-glow": {
+          "0%, 100%": { 
+            opacity: "0.5",
+            filter: "drop-shadow(0 0 2px hsl(var(--cyber)))" 
+          },
+          "50%": { 
+            opacity: "1",
+            filter: "drop-shadow(0 0 8px hsl(var(--cyber)))" 
+          },
+        },
+        "scan": {
+          "0%": { 
+            transform: "translateY(-100%)" 
+          },
+          "100%": { 
+            transform: "translateY(100%)" 
+          },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
+        "heartbeat": "heartbeat 3s ease-in-out infinite",
+        "pulse-glow": "pulse-glow 2s ease-in-out infinite",
+        "scan": "scan 4s linear infinite",
       },
     },
   },
