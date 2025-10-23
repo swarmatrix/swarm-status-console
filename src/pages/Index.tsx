@@ -32,11 +32,37 @@ const Index = () => {
 
   return (
     <div className="min-h-screen bg-background bg-grid">
+      {/* Hexagonal pattern overlay */}
+      <div className="fixed inset-0 bg-hex-pattern opacity-20 pointer-events-none" />
+      
       {/* Network mesh overlay */}
       <div className="fixed inset-0 bg-network-mesh opacity-30 pointer-events-none" />
       
       {/* Scanlines effect */}
       <div className="fixed inset-0 bg-scanlines opacity-10 pointer-events-none" />
+      
+      {/* Animated data streams */}
+      <div className="fixed inset-0 overflow-hidden pointer-events-none">
+        <div className="absolute top-0 left-1/4 w-px h-full bg-gradient-to-b from-transparent via-[hsl(var(--cyber))] to-transparent opacity-30 animate-data-stream-1" />
+        <div className="absolute top-0 left-2/4 w-px h-full bg-gradient-to-b from-transparent via-[hsl(var(--cyber))] to-transparent opacity-30 animate-data-stream-2" />
+        <div className="absolute top-0 left-3/4 w-px h-full bg-gradient-to-b from-transparent via-[hsl(var(--cyber))] to-transparent opacity-30 animate-data-stream-3" />
+      </div>
+      
+      {/* Floating particles */}
+      <div className="fixed inset-0 overflow-hidden pointer-events-none">
+        {[...Array(8)].map((_, i) => (
+          <div
+            key={i}
+            className="absolute w-1 h-1 bg-[hsl(var(--cyber))] rounded-full opacity-40 animate-float"
+            style={{
+              left: `${Math.random() * 100}%`,
+              top: `${Math.random() * 100}%`,
+              animationDelay: `${Math.random() * 5}s`,
+              animationDuration: `${15 + Math.random() * 10}s`,
+            }}
+          />
+        ))}
+      </div>
       
       {/* Overlay gradient */}
       <div className="fixed inset-0 bg-gradient-to-b from-background via-background/95 to-background pointer-events-none" />
@@ -46,6 +72,14 @@ const Index = () => {
       <div className="fixed top-4 right-4 w-16 h-16 border-r-2 border-t-2 border-[hsl(var(--cyber))] opacity-50 pointer-events-none" />
       <div className="fixed bottom-4 left-4 w-16 h-16 border-l-2 border-b-2 border-[hsl(var(--cyber))] opacity-50 pointer-events-none" />
       <div className="fixed bottom-4 right-4 w-16 h-16 border-r-2 border-b-2 border-[hsl(var(--cyber))] opacity-50 pointer-events-none" />
+      
+      {/* Terminal-style timestamp */}
+      <div className="fixed top-6 left-24 text-xs text-[hsl(var(--cyber))] opacity-60 font-mono pointer-events-none">
+        [{new Date().toISOString().split('T')[0]}]
+      </div>
+      <div className="fixed top-6 right-24 text-xs text-[hsl(var(--cyber))] opacity-60 font-mono pointer-events-none">
+        [SECURE-CONNECTION]
+      </div>
 
       <main className="relative container mx-auto px-4 py-16 max-w-4xl">
         {/* Header */}

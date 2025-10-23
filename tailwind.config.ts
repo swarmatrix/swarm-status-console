@@ -109,6 +109,55 @@ export default {
             transform: "translateY(100%)" 
           },
         },
+        "data-stream-1": {
+          "0%": { 
+            transform: "translateY(-100%)",
+            opacity: "0"
+          },
+          "50%": {
+            opacity: "1"
+          },
+          "100%": { 
+            transform: "translateY(100%)",
+            opacity: "0"
+          },
+        },
+        "data-stream-2": {
+          "0%": { 
+            transform: "translateY(-100%)",
+            opacity: "0"
+          },
+          "50%": {
+            opacity: "1"
+          },
+          "100%": { 
+            transform: "translateY(100%)",
+            opacity: "0"
+          },
+        },
+        "data-stream-3": {
+          "0%": { 
+            transform: "translateY(-100%)",
+            opacity: "0"
+          },
+          "50%": {
+            opacity: "1"
+          },
+          "100%": { 
+            transform: "translateY(100%)",
+            opacity: "0"
+          },
+        },
+        "float": {
+          "0%, 100%": {
+            transform: "translateY(0) translateX(0)",
+            opacity: "0.4"
+          },
+          "50%": {
+            transform: "translateY(-20px) translateX(10px)",
+            opacity: "0.8"
+          },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
@@ -116,6 +165,10 @@ export default {
         "heartbeat": "heartbeat 3s ease-in-out infinite",
         "pulse-glow": "pulse-glow 2s ease-in-out infinite",
         "scan": "scan 4s linear infinite",
+        "data-stream-1": "data-stream-1 8s linear infinite",
+        "data-stream-2": "data-stream-2 10s linear infinite 2s",
+        "data-stream-3": "data-stream-3 12s linear infinite 4s",
+        "float": "float 20s ease-in-out infinite",
       },
     },
   },

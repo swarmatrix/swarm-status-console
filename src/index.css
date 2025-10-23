@@ -115,4 +115,29 @@ All colors MUST be HSL.
       hsl(var(--foreground) / 0.03) 4px
     );
   }
+  
+  .bg-hex-pattern {
+    background-image: 
+      repeating-linear-gradient(
+        0deg,
+        transparent,
+        transparent 70px,
+        hsl(var(--cyber) / 0.05) 70px,
+        hsl(var(--cyber) / 0.05) 71px
+      ),
+      repeating-linear-gradient(
+        60deg,
+        transparent,
+        transparent 70px,
+        hsl(var(--cyber) / 0.05) 70px,
+        hsl(var(--cyber) / 0.05) 71px
+      ),
+      repeating-linear-gradient(
+        120deg,
+        transparent,
+        transparent 70px,
+        hsl(var(--cyber) / 0.05) 70px,
+        hsl(var(--cyber) / 0.05) 71px
+      );
+  }
 }
