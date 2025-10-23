@@ -30,23 +30,6 @@ const ServiceCard = ({ name, status, uptime }: ServiceCardProps) => {
 
   return (
     <Card className="relative overflow-hidden border-[hsl(var(--border))] bg-card hover:border-cyber transition-all duration-300 group">
-      {/* Heartbeat animation background */}
-      <div className="absolute inset-0 opacity-10">
-        <svg
-          className="w-full h-full animate-heartbeat"
-          viewBox="0 0 1000 100"
-          preserveAspectRatio="none"
-        >
-          <path
-            d="M0,50 L200,50 L220,20 L240,80 L260,30 L280,70 L300,50 L1000,50"
-            stroke="hsl(var(--cyber))"
-            strokeWidth="2"
-            fill="none"
-            vectorEffect="non-scaling-stroke"
-          />
-        </svg>
-      </div>
-
       {/* Scan line effect */}
       <div className="absolute inset-0 opacity-0 group-hover:opacity-20 pointer-events-none">
         <div className="w-full h-[2px] bg-gradient-to-r from-transparent via-[hsl(var(--cyber))] to-transparent animate-scan" />
